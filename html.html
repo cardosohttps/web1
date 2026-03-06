@@ -7,6 +7,18 @@
     <title>Document</title>
     <style>
         p> span{color:aqua}
+        table,td,th,caption{border:1px solid  #000000;
+        border-collapse: collapse;
+        }
+        #table-churras,#table-churras td,#table-churras th,#table-churras caption{
+            border: 2px solid #04eeff;
+            border-collapse: collapse;
+        }
+        
+        #table-churras td:hover{
+            background-color: goldenrod;
+        }
+
     </style>
 </head>
 <body>
@@ -20,8 +32,66 @@
 <h4> isto é um titulo de nivel 4 </h4>
 <h5> isto é um titulo de nivel 5 </h5>
 <h6> isto é um titulo de nivel 6 </h6>
-<hr>
+<hr> 
 <p><b>Lorem,</b> ipsum<br> <strong> dolor sit amet</strong> consectetur adipisicing elit. Voluptates quia doloribus, mollitia, neque assumenda consequuntur ratione excepturi ea nisi suscipit blanditiis aperiam, quibusdam quas? Consectetur nihil exercitationem recusandae deserunt a.</p>
+
+<table>
+    
+    <caption>Itens</caption>
+    <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+    </tr>
+    <tr>
+    <td rowspan="1" colspan="2">!!</td>
+        <td>y</td>
+        <td>z</td>
+    </tr>
+</table>
+
+<table id="table-churras">
+    <caption>Lista de Compras</caption>
+    <tr>
+        <th>Itens</th>
+        <th>Classificação</th>
+        <th>Descrição</th>
+        <th>Quantidade</th>
+        <th>Valor</th>
+        <th>Subtotal</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td rowspan="3" colspan="1">Comidas</td>
+    </tr>
+    <tr>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td rowspan="3" colspan="1">Bebidas</td>
+    </tr>
+    <tr>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td rowspan="3" colspan="1">Outros</td>
+    </tr>
+    <tr>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>9</td>
+    </tr>
+</table>
+
 
 </body>
 </html>
