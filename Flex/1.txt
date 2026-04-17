@@ -1,0 +1,14 @@
+11-
+#pond {
+  display: flex;
+flex-direction: column; <-- para deixar em coluna -->
+justify-content: flex-end; <-- justify content para horizontal e flex end para ir até o final -->
+}
+
+13-
+#pond {
+  display: flex;
+flex-direction: row-reverse; <--flex-direction para  mudar o eixo principal row reverse para inverter a linha -->
+justify-content: center; <-- justify content para horizontal e center para centralizar -->
+align-items: flex-end <-- align-items flex-end para colocar para o fim da page -->
+}
