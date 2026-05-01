@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5a</title>
+
+<style>
+    body{
+        margin: 0;
+    }
+    
+    .container{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        
+    
+        grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    
+        grid-template-areas:
+        "um um dois tres tres"
+        "quatro quatro dois cinco balls"
+        "seis seis seis cinco balls";
+    }
+    
+    .box{
+        border: 2px solid white;
+    }
+    
+    #bx1{ grid-area: um; background-color: orange; }
+    #bx2{ grid-area: dois; background-color: rgb(227, 180, 115); }
+    #bx3{ grid-area: tres; background-color: rgb(102, 166, 255); }
+    #bx4{ grid-area: quatro; background-color: rgb(0, 86, 198); }
+    #bx5{ grid-area: cinco; background-color: lightgreen; }
+    #bx6{ grid-area: seis; background-color: orange; }
+    
+    .pelotas{
+        grid-area: balls;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #eee;
+    }
+    
+    .bola{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    #b1{ background-color: orange; }
+    #b2{ background-color: pink; }
+    #b3{ background-color: green; }
+    #b4{ background-color: blue; }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="box" id="bx1"></div>
+    <div class="box" id="bx2"></div>
+    <div class="box" id="bx3"></div>
+    <div class="box" id="bx4"></div>
+    <div class="box" id="bx5"></div>
+    <div class="box" id="bx6"></div>
+
+    <div class="pelotas">
+        <div class="bola" id="b1"></div>
+        <div class="bola" id="b2"></div>
+        <div class="bola" id="b3"></div>
+        <div class="bola" id="b4"></div>
+</div>
+
+</body>
+</html>
