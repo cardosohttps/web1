@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout simples</title>
+  <style>
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #eee;
+    }
+ 
+    .container {
+      width: 250px;
+      height: 500px; 
+      padding: 20px;
+      background: #ddd;
+      border-radius: 10px;
+      border: 3px solid #a020f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .linha {
+      height: 12px;
+      background: #ccc;
+      margin: 10px 0;
+      
+    }
+
+    .linha.curta {
+      width: 60%;
+      margin: 10px auto;
+      
+    }
+
+    .circulo {
+      width: 60px;
+      height: 60px;
+      background: #bbb;
+      border-radius: 50%;
+      margin: 30px auto 10px;
+      
+    }
+    .logo-text {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+    
+
+  <div class="container">
+    <p class="logo-text">Company Logo</p>
+    <div class="linha"></div>
+    <div class="linha"></div>
+    <div class="linha"></div>
+    <div class="linha"></div>
+
+    <div class="circulo"></div>
+    <div class="linha curta"></div>
+  </div>
+
+</body>
+</html>

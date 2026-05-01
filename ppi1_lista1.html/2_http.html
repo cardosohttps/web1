@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protocolo HTTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Autor: Gustavo Cardoso | Data: 20/03/2026 -->
+
+<h2>O que é HTTP</h2>
+
+<p>
+HTTP é um protocolo usado na web para comunicação entre o navegador e o servidor.
+Ele funciona com requisição (pedido) e resposta.
+</p>
+<img src="http.jpg" width="200">
+
+<hr>
+
+<h3>Como funciona</h3>
+
+<p>
+Quando você entra em um site, o navegador envia uma requisição
+e o servidor responde com a página.
+</p>
+<img src="download.png" width="350">
+
+<hr>
+
+<h3>Exemplo de Request</h3>
+
+<pre>
+GET /index.html HTTP/1.1
+Host: www.exemplo.com
+User-Agent: Mozilla
+Accept: text/html
+</pre>
+
+<p>
+GET = tipo de requisição <br>
+Host = endereço do site <br>
+User-Agent = navegador <br>
+Accept = tipo de resposta
+</p>
+
+<hr>
+
+<h3>Exemplo de Response</h3>
+
+<pre>
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+&lt;html&gt;
+&lt;body&gt;
+Olá mundo
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>
+200 OK = deu certo <br>
+Content-Type = tipo do conteúdo
+</p>
+
+<hr>
+
+<h3>Imagens</h3>
+
+
+<br><br>
+
+
+
+</body>
+</html>
