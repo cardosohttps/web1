@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 40pt;
+        }
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-areas: 
+                "A A . B"
+                "C D D D";
+            grid-template-columns: 2fr 1fr 2fr 1fr;
+            grid-template-rows: 1fr 3fr;
+            padding: 20px;
+            gap: 15px;
+        }
+        .box {
+            background-color: darkslategrey;
+            color: white;
+            border-radius: 5%;
+            padding: 15px;
+        }
+
+        #box1 { grid-area: A; }
+        #box2 { grid-area: B; }
+        #box3 { grid-area: C; } 
+        #box4 { 
+            grid-area: D; 
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            padding: 20px;
+        }
+        .letrasDentro {
+            background-color: lightgrey;
+            color: darkslategray;
+            border-radius: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box2">B</div>
+        <div class="box" id="box3">C</div>
+        
+        <div class="box" id="box4">
+            <div class="letrasDentro">E</div>
+            <div class="letrasDentro">F</div>
+            <div class="letrasDentro">G</div>
+            <div class="letrasDentro">M</div>
+            <div class="letrasDentro">I</div>
+            <div class="letrasDentro">J</div>
+        </div>
+    </div>
+</body>
+</html>

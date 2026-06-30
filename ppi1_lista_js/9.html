@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 9</title>
+    <style>
+        .box{
+            display: flex;
+            flex-grow: 1;
+            
+        }
+
+        .caixa{
+            border: 1px solid black;
+            height: 100px;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="caixa" id="box1"></div>
+        <div class="caixa" id="box2"></div>
+        <div class="caixa" id="box3"></div>
+        <div class="caixa" id="box4"></div>
+        <div class="caixa" id="box5"></div>
+    </div>
+
+    <script>
+        
+
+        function randColor(){
+            let color = Math.random()*255;
+            return color.toFixed(0);
+        }
+
+        
+
+        document.addEventListener('keypress', ()=>{
+            let caixas = document.querySelectorAll(".caixa")
+            for(i=0; i<caixas.length; i++){
+                caixas[i].style.backgroundColor = "rgb("+randColor()+","+randColor()+","+randColor()+")"
+            }
+
+
+        })

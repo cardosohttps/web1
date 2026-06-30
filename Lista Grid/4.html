@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    <style>
+        *{
+            font-size: 15pt;
+        }
+        .container {
+            display: grid;
+            height: 100vh;
+            gap: 10px;
+            padding: 10px;            
+            grid-template-areas: 
+                "a1 a1 a1"
+                "a2 a3 a4"
+                "a2 a5 a4"
+                "a2 a6 a4"
+                "a7 a7 a7";
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width:500px) {
+            .container{
+                grid-template-areas: 
+                    "a1"
+                    "a3"
+                    "a2"
+                    "a5"
+                    "a4"
+                    "a6"
+                    "a7";
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 5fr 1fr 1fr 1fr;
+            }
+        }
+
+        #box1 { grid-area: a1; background-color: yellow; }
+        #box2 { grid-area: a2; background-color: lightgreen; }
+        #box3 { grid-area: a3; background-color: red; }
+        #box4 { grid-area: a4; background-color: yellow; }
+        #box5 { grid-area: a5; background-color: cornflowerblue; }
+        #box6 { grid-area: a6; background-color: lightgreen; }
+        #box7 { grid-area: a7; background-color: cornflowerblue; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Header</div>
+        <div class="box" id="box2">Left Aside</div>
+        <div class="box" id="box3">Banner</div>
+        <div class="box" id="box4">Right Aside</div>
+        <div class="box" id="box5">Main Content</div>
+        <div class="box" id="box6">Low Content</div>
+        <div class="box" id="box7">Footer</div>
+    </div>
+</body>
+</html>

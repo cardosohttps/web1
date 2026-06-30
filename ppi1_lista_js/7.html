@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 7</title>
+</head>
+<body>
+    <label for="palavra">Digite uma palavra: </label>
+    <input type="text" id="palavra">
+    <button id="verificar">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        let palavra = document.querySelector("#palavra")
+        let verificar = document.getElementById("verificar")
+        let resultado = document.querySelector("#resultado")
+        
+
+        verificar.addEventListener("click", ()=>{
+            let palavraMin = palavra.value.toLowerCase();
+            let palavraInvertida = palavraMin.split("").reverse().join("");
+            console.log(palavraMin)
+            console.log(palavraInvertida)
+            if(palavraMin == palavraInvertida){
+                resultado.innerHTML = "É palíndromo"
+            }else{
+                resultado.innerHTML = "Não é palíndromo"
+            }
+        })
+
+    </script>
+    
+</body>
+</html>

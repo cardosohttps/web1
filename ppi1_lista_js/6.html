@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 6</title>
+</head>
+<body>
+
+    <label id="num1"> Numero 1 :</label>
+    <input type="number" id="inicio">
+     <label id="num2"> Numero 2 :</label>
+    <input type="number" id="final">
+
+    <button id="verificar">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+    let inicio = document.querySelector("#inicio")
+    let fim = document.querySelector("#final")
+    let verificar = document.querySelector("#verificar")
+    let resultado = document.querySelector("#resultado")
+    verificar.addEventListener ("click",()=>{
+        Number.parseInt (inicio.value)
+        Number.parseInt (fim.value)
+        resultado.innerHTML=""
+        let primos=primosIntervalo( Number.parseInt (inicio.value), Number.parseInt (fim.value) )
+        for (i = 0; i < primos.length ; i++){
+            let span=document.createElement("span")
+            //resultado.innerHTML+=primos[i]+";";
+            span.innerHTML = primos[i];
+            span.style.fontSize = "25px"
+            span.style.border = "1px solid black"
+            span.style.borderRadius = "50%"
+            resultado.appendChild(span)
+        }
+
+    })
+    
+    function primo(n){
+
+        if(n === 2){
+            return true
+        }
+
+        for (i=2 ; i<n; i++){
+            if(n % i === 0){
+                return false
+            }
+            else {
+                return true
+            }
+        }
+    }
+    function primosIntervalo (a,b){
+          result = []
+          for ( let i=a; i<= b ; i++ ){
+            if (primo(i)){
+                result.push(i)
+            }
+          }
+          return(result)
+    }
+  
+    
+    
+    </script>
+
+</body>
+</html>

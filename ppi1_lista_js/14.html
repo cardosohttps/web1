@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questao 14</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        #saida{
+            margin-top: 20px;
+            padding: 15px;
+            min-height: 100px;
+            border: 2px solid black;
+            font-size: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Captura de Teclas do Teclado</h1>
+
+    <div id="saida"></div>
+
+    <script>
+        const saida = document.getElementById("saida");
+
+        document.addEventListener("keydown", function(event){
+
+            console.log("Tecla:", event.key, "| Código:", event.code);
+
+            // Remove o último caractere ao pressionar Backspace
+            if(event.key === "Backspace"){
+                saida.innerText = saida.innerText.slice(0, -1);
+                return;
+            }
+
+            if(event.key.length > 1){
+                return;
+            }
+
+            saida.innerText += event.key;
+        });
+    </script>
+
+</body>
+</html>

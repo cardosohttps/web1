@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questão 5 - B</title>
+<style>
+    *{
+        font-size: 14pt;
+    }
+    body {
+        margin: 0;
+    }
+
+    .container {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        gap: 5px;
+        grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "um um dois tres tres"
+        "quatro quatro dois cinco bolinhas"
+        "seis seis seis cinco bolinhas";
+    }
+
+    .box {
+        border: 2px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box a {
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #box2 a, #box5 a { color: darkslategray; }
+
+    #box1 { grid-area: um; background-color: orange; }
+    #box2 { grid-area: dois; background-color: pink; }
+    #box3 { grid-area: tres; background-color: lightblue; }
+    #box4 { grid-area: quatro; background-color: grey; }
+    #box5 { grid-area: cinco; background-color: yellowgreen; }
+    #box6 { grid-area: seis; background-color: goldenrod; }
+
+    .bolinhas {
+        grid-area: bolinhas;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+    }
+
+    .bola {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    #b1 { background-color: orange; }
+    #b2 { background-color: pink; }
+    #b3 { background-color: yellowgreen; }
+    #b4 { background-color: lightblue; }
+
+    @media (max-width:600px) {
+        .container {
+            grid-template-areas: 
+                "um dois"
+                "tres quatro"
+                "cinco seis"
+                "bolinhas bolinhas";
+            grid-template-columns: 2fr 2fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+
+        .bolinhas {
+            flex-direction: row;
+        }
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="box" id="box1"><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web">WEB</a></div>
+    <div class="box" id="box2"><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">HTML</a></div>
+    <div class="box" id="box3"><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">CSS</a></div>
+    <div class="box" id="box4"><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations">ANIMATE</a></div>
+    <div class="box" id="box5"><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/position">POSITION</a></div>
+    <div class="box" id="box6"><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_grid_layout">FLEX & GRID</a></div>
+    <div class="bolinhas">
+        <div class="bola" id="b1"></div>
+        <div class="bola" id="b2"></div>
+        <div class="bola" id="b3"></div>
+        <div class="bola" id="b4"></div>
+    </div>
+</div>
+</body>
+</html>
